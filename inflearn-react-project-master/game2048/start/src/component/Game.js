@@ -1,33 +1,19 @@
 import React from 'react';
+import times from 'lodash/times';
+import { MAX_POS } from '../constant';
 
 export default function Game() {
   return (
     <div className="game-container">
       <div className="grid-container">
-        <div className="grid-row">
-          <div className="grid-cell"></div>
-          <div className="grid-cell"></div>
-          <div className="grid-cell"></div>
-          <div className="grid-cell"></div>
-        </div>
-        <div className="grid-row">
-          <div className="grid-cell"></div>
-          <div className="grid-cell"></div>
-          <div className="grid-cell"></div>
-          <div className="grid-cell"></div>
-        </div>
-        <div className="grid-row">
-          <div className="grid-cell"></div>
-          <div className="grid-cell"></div>
-          <div className="grid-cell"></div>
-          <div className="grid-cell"></div>
-        </div>
-        <div className="grid-row">
-          <div className="grid-cell"></div>
-          <div className="grid-cell"></div>
-          <div className="grid-cell"></div>
-          <div className="grid-cell"></div>
-        </div>
+        {times(MAX_POS, () => (
+                  <div className="grid-row">
+                  <div className="grid-cell"></div>
+                  <div className="grid-cell"></div>
+                  <div className="grid-cell"></div>
+                  <div className="grid-cell"></div>
+                </div>
+        ))}
       </div>
 
       <div className="tile-container">
